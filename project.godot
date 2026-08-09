@@ -26,7 +26,7 @@ window/stretch/aspect="expand"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/loadingscreen/plugin.cfg")
+enabled=PackedStringArray("res://addons/SceneLoadingManager/plugin.cfg")
 
 [file_customization]
 
