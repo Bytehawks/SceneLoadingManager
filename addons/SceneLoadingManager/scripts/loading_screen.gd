@@ -23,6 +23,9 @@ signal loading_screen_ready
 
 var progress_value: float = 0.0
 
+func _init() -> void:
+	self.layer = RenderingServer.CANVAS_LAYER_MAX - 1
+
 func _ready() -> void:
 	if overlay_panel == null:
 		printerr("Overlay Panel not defined")
@@ -32,6 +35,9 @@ func _ready() -> void:
 		return
 	if overlay_panel.material != null and overlay_panel.material is ShaderMaterial:
 		(overlay_panel.material as ShaderMaterial).set_shader_parameter("scale", 0.0)
+	if overlay_panel != null and not use_mask_cutout:
+		overlay_panel.modulate.a = 0
+
 	await _lets_tween(overlay_panel, 1.0, use_mask_cutout)
 	loading_screen_ready.emit()
 
@@ -56,6 +62,7 @@ func _lets_tween(object: Object, target_value: float, mask_cutout: bool = false)
 		tween.tween_property(object, "modulate:a", target_value, transition_time)
 	await tween.finished
 	
+
 #region Tool Scripts
 func _validate_property(property: Dictionary) -> void:
 	if property.name == "pbar_texture_progress_bar" and not pbar_use_progress_bar:
