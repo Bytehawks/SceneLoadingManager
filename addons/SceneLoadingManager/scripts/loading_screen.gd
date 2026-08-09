@@ -30,7 +30,8 @@ func _ready() -> void:
 	if pbar_use_progress_bar and pbar_texture_progress_bar == null:
 		printerr("Progressbar activated, but no Texture-Progressbar defined")
 		return
-	(overlay_panel.material as ShaderMaterial).set_shader_parameter("scale", 0.0)
+	if overlay_panel.material != null and overlay_panel.material is ShaderMaterial:
+		(overlay_panel.material as ShaderMaterial).set_shader_parameter("scale", 0.0)
 	await _lets_tween(overlay_panel, 1.0, use_mask_cutout)
 	loading_screen_ready.emit()
 
