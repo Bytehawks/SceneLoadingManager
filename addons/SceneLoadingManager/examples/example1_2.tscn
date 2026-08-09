@@ -1,15 +1,15 @@
 [gd_scene format=3 uid="uid://cjb6g3p2daxgi"]
 
-[ext_resource type="Script" uid="uid://keq6njmxy3fi" path="res://addons/loadingscreen/test/test.gd" id="1_e66lm"]
+[ext_resource type="Script" uid="uid://keq6njmxy3fi" path="res://addons/SceneLoadingManager/examples/example.gd" id="1_8nh2b"]
 
-[node name="Test2" type="Control" unique_id=1397136820]
+[node name="Example 1-2" type="Control" unique_id=1397136820]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_e66lm")
+script = ExtResource("1_8nh2b")
 
 [node name="Label" type="Label" parent="." unique_id=429228579]
 layout_mode = 1
@@ -20,7 +20,7 @@ offset_left = -21.0
 offset_right = 21.0
 offset_bottom = 23.0
 grow_horizontal = 2
-text = "Test2"
+text = "Example 1-2"
 
 [node name="Button" type="Button" parent="." unique_id=1969449722]
 layout_mode = 1
@@ -35,5 +35,4 @@ offset_right = 62.5
 offset_bottom = 15.5
 grow_horizontal = 2
 grow_vertical = 2
-text = "Switch to Test 1
-"
+text = "Switch to Example 1-1"

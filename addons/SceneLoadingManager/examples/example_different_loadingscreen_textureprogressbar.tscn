@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://bhs04f6ut4hcn"]
+
+[ext_resource type="Script" uid="uid://bhufde784muy0" path="res://addons/SceneLoadingManager/scripts/loading_screen.gd" id="1_2aj7v"]
+[ext_resource type="Texture2D" uid="uid://cgyapnkkew8rf" path="res://addons/SceneLoadingManager/assets/buttonLong_blue_pressed.png" id="2_scgrt"]
+[ext_resource type="Texture2D" uid="uid://csgg0kyi7koii" path="res://addons/SceneLoadingManager/assets/barBlue_horizontalBlue_merged.png" id="3_adhdf"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwrw6"]
+bg_color = Color(9.62615e-07, 0.29271922, 0.40313107, 1)
+
+[node name="ExampleDifferentLoadingscreen" type="CanvasLayer" unique_id=684464217 node_paths=PackedStringArray("overlay_panel", "pbar_texture_progress_bar")]
+layer = 2147483646
+script = ExtResource("1_2aj7v")
+overlay_panel = NodePath("Background")
+min_display_time = 1.0
+pbar_use_progress_bar = true
+pbar_texture_progress_bar = NodePath("TextureProgressBar")
+metadata/_custom_type_script = "uid://bhufde784muy0"
+
+[node name="Background" type="Panel" parent="." unique_id=1133672252]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kwrw6")
+
+[node name="TextureProgressBar" type="TextureProgressBar" parent="." unique_id=1375705899]
+custom_minimum_size = Vector2(0, 20)
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -20.0
+grow_horizontal = 2
+grow_vertical = 0
+nine_patch_stretch = true
+stretch_margin_left = 9
+stretch_margin_right = 9
+texture_under = ExtResource("2_scgrt")
+texture_progress = ExtResource("3_adhdf")

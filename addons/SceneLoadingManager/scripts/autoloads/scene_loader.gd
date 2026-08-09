@@ -41,3 +41,7 @@ func _process(_delta: float) -> void:
 			loaded_resource = ResourceLoader.load_threaded_get(scene_path)
 			get_tree().change_scene_to_packed(loaded_resource)
 			load_finished.emit()
+
+## override the loading screen with own loading screen.
+func set_loading_screen(new_loading_screen_path: String) -> void:
+	loading_screen = load(new_loading_screen_path)

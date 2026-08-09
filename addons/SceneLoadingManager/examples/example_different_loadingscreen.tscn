@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://gi1eerdigbvp"]
+
+[ext_resource type="Script" uid="uid://bhufde784muy0" path="res://addons/SceneLoadingManager/scripts/loading_screen.gd" id="1_kwrw6"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_kwrw6"]
+bg_color = Color(1, 0, 0, 1)
+
+[node name="ExampleDifferentLoadingscreen" type="CanvasLayer" unique_id=684464217 node_paths=PackedStringArray("overlay_panel")]
+layer = 2147483646
+script = ExtResource("1_kwrw6")
+overlay_panel = NodePath("Background")
+min_display_time = 1.0
+transition_time = 2.0
+metadata/_custom_type_script = "uid://bhufde784muy0"
+
+[node name="Background" type="Panel" parent="." unique_id=1133672252]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_kwrw6")
