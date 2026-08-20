@@ -14,6 +14,7 @@ config/name="SceneLoaderManager"
 config/version="1.0.3"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="uid://c3p8144s75scc"
+config/tags=PackedStringArray("addon")
 
 [autoload]
 
